@@ -1,0 +1,19 @@
+# Laptop / CPU stack. The published JSON records were produced on the GPU pins below.
+pytest
+numpy
+scipy
+pyscf>=2.13
+qiskit==2.5.2
+qiskit-nature==0.8.0
+qiskit-algorithms
+qiskit-aer>=0.14
+
+# GPU (Linux x86_64). qiskit-aer-gpu latest on PyPI is 0.15.1, which needs
+# Qiskit 1.x. Nature 0.8 needs algorithms 0.4 / Qiskit 2.x and cannot share
+# that GPU wheel. On RunPod use:
+#   qiskit==1.4.2
+#   qiskit-nature==0.7.2
+#   qiskit-algorithms==0.3.1
+#   qiskit-aer-gpu==0.15.1
+# Same NH3 Hamiltonian and VQD loop; not the laptop's Qiskit 2.5.2 pins.
+

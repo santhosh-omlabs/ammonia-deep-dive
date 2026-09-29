@@ -1,0 +1,13 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+.env
+.DS_Store
+Thumbs.db
+data/projects/nh3-sto3g-fci/
+data/corpus/*.json

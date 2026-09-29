@@ -1,0 +1,368 @@
+{
+  "schema": "ammonia-deep-dive.record.v1",
+  "created_utc": "2026-09-22T15:14:51.612838+00:00",
+  "provenance": {
+    "code": "mol_simulate.simulate_molecule",
+    "pyscf": "2.14.0",
+    "qiskit": "1.4.2",
+    "qiskit_nature": "0.7.2",
+    "qiskit_aer": null,
+    "backend": {
+      "use_gpu": true,
+      "seed": 42,
+      "qiskit": "1.4.2",
+      "qiskit_aer": "0.15.1",
+      "device": "GPU",
+      "primitive": "Aer Estimator V1 GPU + BaseSampler overlap",
+      "custatevec": true,
+      "aer_devices": [
+        "CPU",
+        "GPU"
+      ],
+      "nvidia_smi": "NVIDIA RTX PRO 6000 Blackwell Server Edition, [Insufficient Permissions], 580.159.04",
+      "n_qubits": 12
+    }
+  },
+  "system": {
+    "name": "NH3",
+    "charge": 0,
+    "multiplicity": 3,
+    "n_electrons": 10,
+    "unit": "Angstrom",
+    "geometry_tag": "pyramidal_R0.900",
+    "atoms": [
+      [
+        "N",
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        "H",
+        [
+          0.8337713599775688,
+          0.0,
+          0.33885884860979437
+        ]
+      ],
+      [
+        "H",
+        [
+          -0.41688567998878423,
+          0.7220671786884746,
+          0.33885884860979437
+        ]
+      ],
+      [
+        "H",
+        [
+          -0.4168856799887848,
+          -0.7220671786884744,
+          0.33885884860979437
+        ]
+      ]
+    ]
+  },
+  "model": {
+    "basis": "sto3g",
+    "scf": "ROHF",
+    "active": "auto",
+    "n_spatial": 8,
+    "n_core": 1,
+    "n_cas": 6,
+    "n_alpha_cas": 5,
+    "n_beta_cas": 3,
+    "n_roots": 6,
+    "mo_role": [
+      "frozen core",
+      "active",
+      "active",
+      "active",
+      "active",
+      "active",
+      "active",
+      "discarded virt"
+    ],
+    "note": "CASCI roots are classical keys in this CAS. VQE/VQD stamp the mapped CAS H. Full-space FCI is a different Hamiltonian if active!=full."
+  },
+  "identity": {
+    "name": "NH3",
+    "charge": 0,
+    "multiplicity": 3,
+    "basis": "sto3g",
+    "unit": "Angstrom",
+    "geometry_tag": "pyramidal_R0.900",
+    "atoms": [
+      [
+        "N",
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      [
+        "H",
+        [
+          0.8337713599775688,
+          0.0,
+          0.33885884860979437
+        ]
+      ],
+      [
+        "H",
+        [
+          -0.41688567998878423,
+          0.7220671786884746,
+          0.33885884860979437
+        ]
+      ],
+      [
+        "H",
+        [
+          -0.4168856799887848,
+          -0.7220671786884744,
+          0.33885884860979437
+        ]
+      ]
+    ],
+    "active": "auto",
+    "n_cas": 6,
+    "n_core": 1,
+    "n_roots": 6,
+    "mapper": "bk",
+    "ansatz": "ucc-d",
+    "quantum_roots": 2
+  },
+  "energies": {
+    "e_nn": 13.446764607913956,
+    "e_hf": -54.765221177291885,
+    "e_casci": -54.78462206337325,
+    "e_casci_roots": [
+      -54.78462206337325,
+      -54.76347425759135,
+      -54.55959469068257,
+      -54.5516392601523,
+      -54.484103383675944,
+      -54.42178411078196
+    ],
+    "e_fci_full": -54.81467286524653,
+    "e_circuit": -54.7652211772874,
+    "e_vqe": -54.784455511728424,
+    "e_vqd": [
+      -54.784455511728424,
+      -53.71627977775561
+    ],
+    "e_shots": -54.78535364048409,
+    "e_shots_vqd": [
+      -54.78535364048409,
+      -53.678321019448596
+    ],
+    "unit": "hartree"
+  },
+  "states": [
+    {
+      "root": 0,
+      "label": "ground in this multiplicity and CAS",
+      "energy": -54.78462206337325,
+      "source": "casci",
+      "s2": 2.0000000000000004,
+      "spin": 3.0000000000000004,
+      "dipole_au": [
+        0.007622221066268531,
+        4.812222299088731e-06,
+        -0.09811468316536986
+      ],
+      "dipole_debye": [
+        0.019373752078636775,
+        1.223144815130294e-05,
+        -0.24938263143953088
+      ],
+      "dipole_norm_debye": 0.2501340426309816,
+      "arrays": "ci_0, rdm1_cas_0, dipole_au_0"
+    },
+    {
+      "root": 1,
+      "label": "CASCI root 1 (same spin manifold)",
+      "energy": -54.76347425759135,
+      "source": "casci",
+      "s2": 1.9999999999999996,
+      "spin": 2.9999999999999996,
+      "dipole_au": [
+        0.5033794609372169,
+        -0.00015262580574604279,
+        0.0723160173889148
+      ],
+      "dipole_debye": [
+        1.2794628747824734,
+        -0.0003879360747501359,
+        0.1838089685442696
+      ],
+      "dipole_norm_debye": 1.292598597925256,
+      "arrays": "ci_1, rdm1_cas_1, dipole_au_1"
+    },
+    {
+      "root": 2,
+      "label": "CASCI root 2 (same spin manifold)",
+      "energy": -54.55959469068257,
+      "source": "casci",
+      "s2": 2.0000000000000004,
+      "spin": 3.0000000000000004,
+      "dipole_au": [
+        0.1428550054976795,
+        -0.0006787828023997466,
+        0.5229899775248277
+      ],
+      "dipole_debye": [
+        0.3631011795173814,
+        -0.001725293666321445,
+        1.3293078324659642
+      ],
+      "dipole_norm_debye": 1.378007531423725,
+      "arrays": "ci_2, rdm1_cas_2, dipole_au_2"
+    },
+    {
+      "root": 3,
+      "label": "CASCI root 3 (same spin manifold)",
+      "energy": -54.5516392601523,
+      "source": "casci",
+      "s2": 2.0,
+      "spin": 3.0,
+      "dipole_au": [
+        -0.1564853844606916,
+        0.0005089821702444208,
+        0.40369271277413077
+      ],
+      "dipole_debye": [
+        -0.3977461446097596,
+        0.0012937035403499941,
+        1.0260844529752189
+      ],
+      "dipole_norm_debye": 1.1004785203983911,
+      "arrays": "ci_3, rdm1_cas_3, dipole_au_3"
+    },
+    {
+      "root": 4,
+      "label": "CASCI root 4 (same spin manifold)",
+      "energy": -54.484103383675944,
+      "source": "casci",
+      "s2": 1.9999999999999998,
+      "spin": 3.0,
+      "dipole_au": [
+        0.42683354110312444,
+        0.0002918810986771714,
+        0.5256382669770705
+      ],
+      "dipole_debye": [
+        1.0849025674122612,
+        0.0007418876982244187,
+        1.336039112342807
+      ],
+      "dipole_norm_debye": 1.7210504469319976,
+      "arrays": "ci_4, rdm1_cas_4, dipole_au_4"
+    },
+    {
+      "root": 5,
+      "label": "CASCI root 5 (same spin manifold)",
+      "energy": -54.42178411078196,
+      "source": "casci",
+      "s2": 1.9999999999999996,
+      "spin": 2.9999999999999996,
+      "dipole_au": [
+        0.6796654166092995,
+        -0.0004489279455652806,
+        0.632961807593472
+      ],
+      "dipole_debye": [
+        1.727537047709664,
+        -0.001141060937873234,
+        1.6088283229975922
+      ],
+      "dipole_norm_debye": 2.360659680281919,
+      "arrays": "ci_5, rdm1_cas_5, dipole_au_5"
+    }
+  ],
+  "quantum": {
+    "mapper": "bk",
+    "n_qubits": 12,
+    "n_pauli": 1188,
+    "ansatz": "ucc-d",
+    "n_parameters": 54,
+    "optimizer": "COBYLA",
+    "nfev": 432,
+    "quantum_roots": 2,
+    "vqd_beta": 5.0,
+    "e_vqe": -54.784455511728424,
+    "e_vqd": [
+      -54.784455511728424,
+      -53.71627977775561
+    ],
+    "e_shots": -54.78535364048409,
+    "e_shots_vqd": [
+      -54.78535364048409,
+      -53.678321019448596
+    ],
+    "shots": 4096,
+    "checkpoint": false,
+    "use_gpu": true,
+    "device": "GPU",
+    "seed": 42,
+    "runtime_s": {
+      "chemistry": 2.9999704729998484,
+      "vqe": 0.0,
+      "vqd": 259.8448756050202,
+      "wall": 406.8984289619839,
+      "other_s": 2.9999704729998484,
+      "shots_s": 129.6301912900526,
+      "shots_calls": 2.0
+    },
+    "stages": [
+      {
+        "name": "ground",
+        "energy": -54.7838038648314,
+        "nfev": 432,
+        "runtime_s": 74.96116279199487,
+        "optimizer": {
+          "cost_function_evals": 432,
+          "optimizer_time": 74.95967149734497,
+          "nfev": 432,
+          "runtime_s": 74.96116279199487
+        },
+        "utc": "2026-09-22T13:50:14.871463+00:00"
+      },
+      {
+        "name": "ground",
+        "energy": -54.784455511728424,
+        "nfev": 432,
+        "runtime_s": 0.0,
+        "optimizer": {
+          "cost_function_evals": 432,
+          "runtime_s": 259.8448756050202
+        },
+        "utc": "2026-09-22T15:12:29.280091+00:00"
+      },
+      {
+        "name": "excited_1",
+        "energy": -53.71627977775561,
+        "nfev": 432,
+        "runtime_s": 259.8448756050202,
+        "optimizer": {
+          "cost_function_evals": 432,
+          "runtime_s": 259.8448756050202
+        },
+        "utc": "2026-09-22T15:12:29.280111+00:00"
+      }
+    ],
+    "optimizer_status": {
+      "vqe": null,
+      "vqd": {
+        "cost_function_evals": 432,
+        "runtime_s": 259.8448756050202
+      }
+    },
+    "arrays": "vqe_theta, psi_real, psi_imag, vqd_theta_*, vqd_psi_*"
+  },
+  "arrays": "NH3_m3_17ebbaccb4ac.npz"
+}

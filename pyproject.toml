@@ -1,0 +1,23 @@
+[project]
+name = "ammonia-deep-dive"
+version = "0.2.0"
+description = "STO-3G CAS VQE/VQD on a small ammonia geometry and spin grid."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Santhosh Reddy" }]
+dependencies = [
+  "numpy",
+  "scipy",
+  "pyscf>=2.13",
+  "qiskit==2.5.2",
+  "qiskit-nature==0.8.0",
+  "qiskit-algorithms",
+  "qiskit-aer>=0.14",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

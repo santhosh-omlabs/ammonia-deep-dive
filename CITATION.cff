@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: If you use this study, cite it as software. Do not cite the energies as experimental ammonia thermochemistry.
+title: "Ammonia STO-3G CAS energies with VQE and VQD"
+abstract: "Eight NH3 geometries (pyramidal and planar, singlet and triplet) in STO-3G with a 12-qubit CAS. CASCI reference, Bravyi-Kitaev, UCC doubles, VQE and VQD k=2. Ground VQD matches CASCI to about a millihartree. The excited VQD stamp stays above the CASCI excited root."
+authors:
+  - family-names: Reddy
+    given-names: Santhosh
+type: software
+license: MIT
+version: 0.2.0
+date-released: "2026-09-29"
+keywords:
+  - ammonia
+  - STO-3G
+  - CASCI
+  - VQE
+  - VQD
+  - Qiskit
+  - PySCF
+references:
+  - type: software
+    title: "PySCF"
+    url: "https://pyscf.org/"
+    notes: "SCF and CASCI."
+  - type: software
+    title: "Qiskit Nature"
+    url: "https://qiskit-community.github.io/qiskit-nature/"
+    notes: "Fermionic operator, Bravyi-Kitaev mapper, UCC."
